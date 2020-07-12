@@ -18,5 +18,5 @@ inputs:
       pull request title will be used.
     required: false
 runs:
-  using: node12
-  main: dist/add-changeset.js
+  using: docker
+  image: Dockerfile
