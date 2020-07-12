@@ -1,6 +1,7 @@
 const core = require('@actions/core')
 const github = require('@actions/github')
 const { default: write } = require('@changesets/write')
+const { print } = require('@ianwalter/print')
 
 const types = ['major', 'minor', 'patch']
 
@@ -16,7 +17,7 @@ async function run () {
   // from the workflow input.
   type = type || core.getInput('type')
 
-  if (namespace === 'changeset' && type && types.includes(type)) {
+  if (namespace === 'changeset' && types.includes(type)) {
 
     // Get the package name from the workflow input or try to determine it by
     // finding the nearest package.json to the first changed file.
@@ -40,6 +41,6 @@ async function run () {
 }
 
 run().catch(err => {
-  core.error(err)
+  print.error(err)
   core.setFailed(err.message)
 })
