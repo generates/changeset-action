@@ -1,0 +1,23 @@
+{
+  "name": "add-changeset-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/add-changeset-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianwalter/add-changeset-action/issues"
+  },
+  "homepage": "https://github.com/ianwalter/add-changeset-action#readme",
+  "dependencies": {
+    "@changesets/write": "^0.1.3"
+  }
+}

@@ -1,0 +1,12 @@
+name: Changeset
+on:
+  pull_request:
+    types: [labeled]
+  workflow_dispatch:
+jobs:
+  changeset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Label
+        run: echo ${{ github.event }}
