@@ -8,5 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Label
-        run: echo ${{ toJson(github.event) }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Changeset
+        uses: ./
