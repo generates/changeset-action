@@ -5,7 +5,7 @@
   "description": "Automate adding a changeset for simple pull requests",
   "main": "dist/add-changeset.js",
   "scripts": {
-    "dist": "dist --inline @changesets/write"
+    "dist": "dist --inline @changesets/write,@actions/core,@actions/github"
   },
   "repository": {
     "type": "git",
