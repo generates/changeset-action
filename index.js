@@ -10,7 +10,7 @@ async function run () {
   const title = github.context.event?.pull_request?.title
 
   // Try tp extract changeset data from the pull request label.
-  let [namespace = 'changeset', type] = label.split(':')
+  let [namespace = 'changeset', type] = label?.split(':')
 
   // If type can't be determined from an added pull request label, try to get it
   // from the workflow input.
