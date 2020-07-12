@@ -16,7 +16,7 @@ async function run () {
   // from the workflow input.
   type = type || core.getInput('type')
 
-  if (namespace === 'changeset' && types.includes(type)) {
+  if (namespace === 'changeset' && type && types.includes(type)) {
 
     // Get the package name from the workflow input or try to determine it by
     // finding the nearest package.json to the first changed file.
