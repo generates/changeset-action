@@ -6,6 +6,7 @@ const dot = require('@ianwalter/dot')
 const execa = require('execa')
 
 const types = ['major', 'minor', 'patch']
+const ignoredFiles = ['package-lock.json', 'pnpm-lock.yaml', 'yarn.lock']
 
 async function run () {
   // Try to extract changeset data from the workflow context.
@@ -24,8 +25,21 @@ async function run () {
   if (ns === 'changeset' && types.includes(type)) {
     // Get the package name from the workflow input or try to determine it by
     // finding the nearest package.json to the first changed file.
-    if (!package) {
-      // TODO: implement
+    const releases = []
+    if (package) {
+      releases.push[{ name: package, type }]
+    } else {
+      const { stdout } = await execa(
+        'git',
+        ['diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD~1']
+      )
+      for (const file of stdout.split('\n')) {
+        if (!ignoredFiles.includes(file)) {
+          const cwd = path.dirname(file)
+          const { packageJson } = await readPkgUp({ cwd })
+          releases.push({ name: packageJson.name, type })
+        }
+      }
     }
 
     // Get the changeset summary from the workflow input or from the title of
@@ -37,7 +51,7 @@ async function run () {
 
     // Try to write and commit the changeset.
     const cwd = process.cwd()
-    await write({ summary, releases: [{ name: package, type }] }, cwd)
+    await write({ summary, releases }, cwd)
 
     const name = 'github-actions[bot]'
     await execa('git', ['config', '--global', 'user.name', name])
