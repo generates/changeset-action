@@ -39,13 +39,13 @@ async function run () {
     const cwd = process.cwd()
     await write({ summary, releases: [{ name: package, type }] }, cwd)
 
-    const name = `"github-actions[bot]"`
+    const name = 'github-actions[bot]'
     await execa('git', ['config', '--global', 'user.name', name])
-    const email = `"github-actions[bot]@users.noreply.github.com"`
+    const email = 'github-actions[bot]@users.noreply.github.com'
     await execa('git', ['config', '--global', 'user.email', email])
 
     await execa('git', ['add', '.'])
-    await execa('git', ['commit', '-m', '"Adding changeset"'])
+    await execa('git', ['commit', '-m', 'Adding changeset'])
     await execa('git', ['push', 'origin'])
   } else {
     print.info('Not adding changeset', { ns, type })
