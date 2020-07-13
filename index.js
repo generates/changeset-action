@@ -12,6 +12,7 @@ async function run () {
 
   // Try to extract changeset data from the pull request label or workflow
   // input.
+  print.debug('semver', core.getInput('semver'))
   let [ns, semver] = label?.split(':') || ['changeset', core.getInput('semver')]
 
   if (ns === 'changeset' && types.includes(semver)) {
