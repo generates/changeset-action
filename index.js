@@ -37,7 +37,7 @@ async function run () {
 
     // Try to write and commit the changeset.
     const cwd = process.cwd()
-    await write({ summary, releases: [{ name: package, type }] }, )
+    await write({ summary, releases: [{ name: package, type }] }, cwd)
     await add('.', cwd)
     await commit(`docs(changeset): ${summary}`, cwd)
   } else {
