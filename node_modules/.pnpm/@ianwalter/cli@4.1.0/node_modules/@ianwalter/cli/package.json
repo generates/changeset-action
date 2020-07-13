@@ -1,0 +1,73 @@
+{
+  "name": "@ianwalter/cli",
+  "description": "A utility to help build command-line and package.json driven applications",
+  "version": "4.1.0",
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js tests",
+    "example": "./tests/fixtures/exampleCli.js",
+    "test": "bff"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/cli.git"
+  },
+  "keywords": [
+    "cli",
+    "command-line",
+    "command",
+    "line",
+    "args",
+    "flags",
+    "options",
+    "package.json",
+    "configuration"
+  ],
+  "bugs": {
+    "url": "https://github.com/ianwalter/cli/issues"
+  },
+  "homepage": "https://github.com/ianwalter/cli#readme",
+  "dependencies": {
+    "@ianwalter/merge": "^5.0.0",
+    "@ianwalter/print": "^5.0.0",
+    "camelcase": "^5.3.1",
+    "common-tags": "^1.8.0",
+    "decamelize": "^3.2.0",
+    "dot-prop": "^5.2.0",
+    "getopts": "^2.2.5",
+    "read-pkg-up": "^7.0.1"
+  },
+  "devDependencies": {
+    "@ianwalter/bff": "^8.1.0",
+    "@ianwalter/eslint-config": "^3.1.0",
+    "@ianwalter/release": "^5.0.0",
+    "@ianwalter/renovate-config": "^1.2.0",
+    "execa": "^4.0.0"
+  },
+  "exampleCli": {
+    "level": "debug",
+    "processorConcurrency": 2,
+    "some": {
+      "thing": true,
+      "other": {
+        "thing": "a"
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@ianwalter"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "@ianwalter"
+    ]
+  }
+}

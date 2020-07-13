@@ -3,10 +3,29 @@ on:
   pull_request:
     types: [labeled]
   workflow_dispatch:
+    inputs:
+      type:
+        description: |
+          The SemVer type <major|minor|patch> to use when running manually and so
+          the "changeset:<type>" pull request label can't be used.
+        required: false
+      package:
+        description: |
+          The package name to use when running manually. If not specified, it will
+          be determined by looking at the closest package.json to the first changed
+          file.
+        required: false
+      summary:
+        description: |
+          The changeset summary to use when running manually. If not specified, the
+          pull request title will be used.
+        required: false
 jobs:
   changeset:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Label
-        run: echo ${{ github.event }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Changeset
+        uses: ./

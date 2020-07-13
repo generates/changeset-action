@@ -1,1 +1,3 @@
-node_modules
+.vscode
+node_modules/@changesets/cli
+node_modules/@ianwalter/monorepo-app

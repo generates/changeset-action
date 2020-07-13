@@ -1,0 +1,54 @@
+{
+  "name": "@ianwalter/merge",
+  "description": "Recursively merge JavaScript Objects",
+  "version": "5.0.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/merge.git"
+  },
+  "keywords": [
+    "merge",
+    "object",
+    "array",
+    "assign",
+    "recursive"
+  ],
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "bugs": {
+    "url": "https://github.com/ianwalter/merge/issues"
+  },
+  "homepage": "https://github.com/ianwalter/merge#readme",
+  "main": "dist/merge.js",
+  "module": "dist/merge.m.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "dist",
+    "test": "bff"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@ianwalter/bff": "^6.3.1",
+    "@ianwalter/dist": "^5.0.1",
+    "@ianwalter/eslint-config": "^2.0.1",
+    "@ianwalter/renovate-config": "^1.1.1",
+    "np": "^5.0.3"
+  },
+  "browserslist": "> 2%, not dead",
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@ianwalter/eslint-config"
+    ]
+  },
+  "eslintIgnore": [
+    "dist"
+  ],
+  "renovate": {
+    "extends": [
+      "@ianwalter"
+    ]
+  }
+}

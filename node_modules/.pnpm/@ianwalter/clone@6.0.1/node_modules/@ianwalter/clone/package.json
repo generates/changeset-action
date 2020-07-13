@@ -1,0 +1,60 @@
+{
+  "name": "@ianwalter/clone",
+  "version": "6.0.1",
+  "description": "A configurable utility to clone JavaScript data (Objects, Arrays, etc)",
+  "module": "dist/clone.m.js",
+  "main": "dist/clone.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "dist",
+    "test": "bff"
+  },
+  "keywords": [
+    "clone",
+    "copy",
+    "deep",
+    "Object.create",
+    "getter",
+    "setter",
+    "vuex"
+  ],
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@ianwalter/bff": "^9.6.0",
+    "@ianwalter/dist": "^5.3.0",
+    "@ianwalter/eslint-config": "^4.0.0",
+    "@ianwalter/release": "^5.0.0",
+    "@ianwalter/renovate-config": "^1.2.0",
+    "vue": "^2.6.11",
+    "vuex": "^3.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ianwalter/clone/issues"
+  },
+  "homepage": "https://github.com/ianwalter/clone#readme",
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@ianwalter"
+    ]
+  },
+  "eslintIgnore": [
+    "dist"
+  ],
+  "renovate": {
+    "extends": [
+      "@ianwalter"
+    ]
+  }
+}
