@@ -35,7 +35,7 @@ async function run () {
     }
 
     // Try to write and commit the changeset.
-    await write({ summary, releases: [{ name: package, type }] })
+    await write({ summary, releases: [{ name: package, type }] }, process.cwd())
   } else {
     print.info('Not adding changeset', { ns, type })
   }
