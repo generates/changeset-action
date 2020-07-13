@@ -13,6 +13,7 @@ async function run () {
 
   // Try to extract changeset data from the pull request label or workflow
   // input.
+  print.debug('SUMARY', core.getInput('summary'), github.context)
   let [ns, type] = label
     ? label.split(':')
     : ['changeset', core.getInput('type')]
@@ -33,7 +34,7 @@ async function run () {
     }
 
     // Try to write and commit the changeset.
-    await write({ summary, releases: [{ name, type: semver }] })
+    await write({ summary, releases: [{ name, type }] })
   } else {
     print.info('Not adding changeset', { ns, type })
   }
