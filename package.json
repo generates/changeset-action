@@ -16,6 +16,7 @@
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0",
     "@changesets/write": "^0.1.3",
+    "@ianwalter/cloneable": "^2.0.0",
     "@ianwalter/dot": "^1.0.4",
     "@ianwalter/print": "^7.0.0"
   },
