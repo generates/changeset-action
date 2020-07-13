@@ -36,7 +36,7 @@ async function run () {
     // Try to write and commit the changeset.
     await write({ summary, releases: [{ name, type }] })
   } else {
-    core.info('Not adding changeset', { namespace, type })
+    print.info('Not adding changeset', { namespace, type })
   }
 }
 
