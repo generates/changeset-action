@@ -3,6 +3,7 @@ const github = require('@actions/github')
 const { default: write } = require('@changesets/write')
 const { print } = require('@ianwalter/print')
 const dot = require('@ianwalter/dot')
+const { add, commit } = require('@changesets/git')
 
 const types = ['major', 'minor', 'patch']
 
@@ -35,7 +36,10 @@ async function run () {
     }
 
     // Try to write and commit the changeset.
-    await write({ summary, releases: [{ name: package, type }] }, process.cwd())
+    const cwd = process.cwd()
+    await write({ summary, releases: [{ name: package, type }] }, )
+    await add('.', cwd)
+    await commit(`docs(changeset): ${summary}`, cwd)
   } else {
     print.info('Not adding changeset', { ns, type })
   }
