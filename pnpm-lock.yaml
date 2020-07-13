@@ -2,7 +2,7 @@ dependencies:
   '@actions/core': 1.2.4
   '@actions/github': 4.0.0
   '@changesets/write': 0.1.3
-  '@ianwalter/print': 8.0.4
+  '@ianwalter/print': 8.0.5
 devDependencies:
   '@ianwalter/monorepo-app': 1.0.0_@ianwalter+monorepo-app@1.0.0
 lockfileVersion: 5.1
@@ -103,6 +103,10 @@ packages:
   /@ianwalter/clone/6.0.1:
     resolution:
       integrity: sha512-3dCmuxyyZKUPM7kFI2sf7WxQli7KL6FisH9uOtcGvjmvHOwKW+NHXVwCTD4xfrxEGhu4eAKwO0BN9f8V0YYAKQ==
+  /@ianwalter/cloneable/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-ZMKux34x/+EJIc6RCu01MmFXbW1rDSCCHvL9Bu81Hy/QGwvYu/lJACXWEbiCC/q7kDfVhA8LWNcLeMsp7G5a/A==
   /@ianwalter/dot/1.0.4:
     resolution:
       integrity: sha512-bq6q4ZXWzQfBbE29i6trTwAtmmRzSWU0D/fSPhA/tDNbxhSlXDYUxfITtq1cctqi+s4BV4PgYIjxNkLeePK1mQ==
@@ -170,9 +174,28 @@ packages:
       marked: 1.1.0
       marked-terminal: 4.1.0_marked@1.1.0
       strip-ansi: 6.0.0
+    dev: true
     hasBin: true
     resolution:
       integrity: sha512-XizAXpyo7kyhGZ/PdeGF2oNqlnWmhGuI+2e5ofNOZlwn6+yuAX4Ph1Wor0dxyNi41N0ERBZcJG5slV+nNaeETw==
+  /@ianwalter/print/8.0.5:
+    dependencies:
+      '@ianwalter/chromafi': 1.0.1
+      '@ianwalter/cli': 4.1.0
+      '@ianwalter/clone': 6.0.1
+      '@ianwalter/cloneable': 2.0.0
+      '@ianwalter/dot': 1.0.4
+      '@ianwalter/merge': 9.0.1
+      chalk: 4.1.0
+      has-ansi: 4.0.0
+      has-emoji: 1.1.0
+      marked: 1.1.0
+      marked-terminal: 4.1.0_marked@1.1.0
+      strip-ansi: 6.0.0
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-i8wUEyEa9BZMbzhFHJ29CEjzZXBvu0ckjWkVZOuUOE96LkA3jI1vWtHD+EHzIK/r54STjUGKAp3EyeiEhK4e+w==
   /@octokit/auth-token/2.4.2:
     dependencies:
       '@octokit/types': 5.0.1
@@ -1042,4 +1065,4 @@ specifiers:
   '@actions/github': ^4.0.0
   '@changesets/write': ^0.1.3
   '@ianwalter/monorepo-app': ^1.0.0
-  '@ianwalter/print': ^8.0.4
+  '@ianwalter/print': ^8.0.5
