@@ -18,5 +18,5 @@ inputs:
       pull request title will be used.
     required: false
 runs:
-  using: docker
-  image: Dockerfile
+  using: node14
+  main: index.js

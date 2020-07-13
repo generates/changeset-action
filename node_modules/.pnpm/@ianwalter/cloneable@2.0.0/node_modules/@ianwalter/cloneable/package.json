@@ -1,0 +1,55 @@
+{
+  "name": "@ianwalter/cloneable",
+  "description": "Create a clone of an object that is accepted by the Structured Clone Algorithm",
+  "version": "2.0.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/nrg.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ianwalter"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "bff"
+  },
+  "homepage": "https://github.com/ianwalter/cloneable#readme",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/cloneable.git"
+  },
+  "keywords": [
+    "clone",
+    "DataCloneError",
+    "postMessage",
+    "structured",
+    "algorithm",
+    "worker"
+  ],
+  "bugs": {
+    "url": "https://github.com/ianwalter/cloneable/issues"
+  },
+  "devDependencies": {
+    "@ianwalter/bff": "^9.6.0",
+    "@ianwalter/eslint-config": "^4.0.0",
+    "@ianwalter/release": "^5.0.0",
+    "@ianwalter/renovate-config": "^1.2.0",
+    "@ianwalter/requester": "^2.2.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@ianwalter"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "@ianwalter"
+    ]
+  }
+}
