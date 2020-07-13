@@ -33,7 +33,7 @@ async function run () {
     // Try to write and commit the changeset.
     await write({ summary, releases: [{ name, type: semver }] })
   } else {
-    print.info('Not adding changeset', { namespace, semver })
+    print.info('Not adding changeset', { ns, semver })
   }
 }
 
