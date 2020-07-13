@@ -4,7 +4,7 @@ on:
     types: [labeled]
   workflow_dispatch:
     inputs:
-      semver:
+      type:
         description: |
           The SemVer type <major|minor|patch> to use when running manually and so
           the "changeset:<type>" pull request label can't be used.
