@@ -1,7 +1,7 @@
 name: Add Changeset
 description: Automate adding a changeset for simple pull requests
 inputs:
-  type:
+  semver:
     description: |
       The SemVer type <major|minor|patch> to use when running manually and so
       the "changeset:<type>" pull request label can't be used.

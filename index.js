@@ -10,14 +10,11 @@ async function run () {
   const label = github.context.event?.label?.name
   const title = github.context.event?.pull_request?.title
 
-  // Try tp extract changeset data from the pull request label.
-  let [namespace = 'changeset', type] = label?.split(':') || []
+  // Try to extract changeset data from the pull request label or workflow
+  // input.
+  let [ns, semver] = label?.split(':') || ['changeset', core.getInput('semver')]
 
-  // If type can't be determined from an added pull request label, try to get it
-  // from the workflow input.
-  type = type || core.getInput('type')
-
-  if (namespace === 'changeset' && types.includes(type)) {
+  if (ns === 'changeset' && types.includes(semver)) {
 
     // Get the package name from the workflow input or try to determine it by
     // finding the nearest package.json to the first changed file.
@@ -34,9 +31,9 @@ async function run () {
     }
 
     // Try to write and commit the changeset.
-    await write({ summary, releases: [{ name, type }] })
+    await write({ summary, releases: [{ name, type: semver }] })
   } else {
-    print.info('Not adding changeset', { namespace, type })
+    print.info('Not adding changeset', { namespace, semver })
   }
 }
 
