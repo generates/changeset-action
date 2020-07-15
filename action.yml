@@ -1,6 +1,9 @@
 name: Add Changeset
 description: Automate adding a changeset for simple pull requests
 author: Ian Walter
+branding:
+  icon: book
+  color: blue
 inputs:
   type:
     description: |
