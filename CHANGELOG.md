@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.0.4
+
+### Patch Changes
+
+- 4864ac7: Unignoring monorepo-app because of action error
+
 ## 1.0.3
 
 ### Patch Changes
