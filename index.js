@@ -1,16 +1,18 @@
+const path = require('path')
 const core = require('@actions/core')
 const github = require('@actions/github')
 const { default: write } = require('@changesets/write')
 const { print } = require('@ianwalter/print')
 const dot = require('@ianwalter/dot')
 const execa = require('execa')
+const readPkgUp = require('read-pkg-up')
 
 const types = ['major', 'minor', 'patch']
 const ignoredFiles = ['package-lock.json', 'pnpm-lock.yaml', 'yarn.lock']
 
 async function run () {
   // Try to extract changeset data from the workflow context.
-  let { type, package, summary } = github.context.payload.inputs
+  let { type, name, summary } = github.context.payload.inputs
   let ns = 'changeset'
 
   // Try to extract changeset data from the pull request label or workflow
@@ -26,8 +28,8 @@ async function run () {
     // Get the package name from the workflow input or try to determine it by
     // finding the nearest package.json to the first changed file.
     const releases = []
-    if (package) {
-      releases.push[{ name: package, type }]
+    if (name) {
+      releases.push({ name, type })
     } else {
       const { stdout } = await execa(
         'git',
@@ -53,8 +55,8 @@ async function run () {
     const cwd = process.cwd()
     await write({ summary, releases }, cwd)
 
-    const name = 'github-actions[bot]'
-    await execa('git', ['config', '--global', 'user.name', name])
+    const author = 'github-actions[bot]'
+    await execa('git', ['config', '--global', 'user.name', author])
     const email = 'github-actions[bot]@users.noreply.github.com'
     await execa('git', ['config', '--global', 'user.email', email])
 
