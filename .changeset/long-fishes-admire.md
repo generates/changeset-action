@@ -1,5 +1,5 @@
 ---
-"add-changeset-action": major
+"add-changeset": major
 ---
 
 First version

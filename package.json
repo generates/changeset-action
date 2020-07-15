@@ -1,17 +1,17 @@
 {
   "private": true,
-  "name": "add-changeset-action",
+  "name": "add-changeset",
   "version": "0.0.0",
   "description": "Automate adding a changeset for simple pull requests",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ianwalter/add-changeset-action.git"
+    "url": "git+https://github.com/ianwalter/add-changeset.git"
   },
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/ianwalter/add-changeset-action/issues"
+    "url": "https://github.com/ianwalter/add-changeset/issues"
   },
-  "homepage": "https://github.com/ianwalter/add-changeset-action#readme",
+  "homepage": "https://github.com/ianwalter/add-changeset#readme",
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0",
