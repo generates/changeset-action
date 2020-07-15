@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.0.6
+
+### Patch Changes
+
+- 98be28d: Adding debug statements
+
 ## 1.0.5
 
 ### Patch Changes
