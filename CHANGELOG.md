@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.0.2
+
+### Patch Changes
+
+- 2a725a8: Switching from pnpm to npm for this action
+
 ## 1.0.1
 
 ### Patch Changes
