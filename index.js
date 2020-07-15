@@ -12,7 +12,7 @@ const ignoredFiles = ['package-lock.json', 'pnpm-lock.yaml', 'yarn.lock']
 
 async function run () {
   // Try to extract changeset data from the workflow context.
-  let { type, name, summary } = github.context.payload.inputs
+  let { type, name, summary } = github.context.payload.inputs || {}
   let ns = 'changeset'
 
   // Try to extract changeset data from the pull request label or workflow
