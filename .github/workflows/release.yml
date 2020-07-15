@@ -7,7 +7,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     container:
-      image: ianwalter/pnpm
+      image: node:12.18
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -17,7 +17,7 @@ jobs:
           # generate changelogs with the correct commits.
           fetch-depth: 0
       - name: Install
-        run: pnpm i --dev
+        run: npm i --dev
       - name: Changesets
         uses: changesets/action@master
         with:
