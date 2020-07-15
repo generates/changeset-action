@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.0.5
+
+### Patch Changes
+
+- 82da97c: Fixing destructure error
+
 ## 1.0.4
 
 ### Patch Changes
