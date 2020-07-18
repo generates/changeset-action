@@ -1,0 +1,6 @@
+{
+  "pull_request": {
+    "action": "labeled",
+    "label": "changeset:major"
+  }
+}
