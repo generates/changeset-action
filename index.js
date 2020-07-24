@@ -18,7 +18,7 @@ async function run () {
 
   // Try to extract changeset data from the pull request label or workflow
   // input.
-  const label = dot.get(github.context, 'payload.pull_request.label')
+  const label = dot.get(github.context, 'payload.label.name')
   if (!type && label) {
     const parts = label.split(':')
     ns = parts[0]
