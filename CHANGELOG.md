@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.0.8
+
+### Patch Changes
+
+- 7154355: Adding duplicate package name check
+
 ## 1.0.7
 
 ### Patch Changes
