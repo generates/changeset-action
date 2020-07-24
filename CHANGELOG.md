@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.0.7
+
+### Patch Changes
+
+- 47471d8: Fixing label context path
+
 ## 1.0.6
 
 ### Patch Changes
