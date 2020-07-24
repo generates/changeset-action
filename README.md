@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Changeset
         uses: ianwalter/add-changeset@v1.0.0
 ```
