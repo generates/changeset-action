@@ -47,10 +47,8 @@ async function run () {
 
     // Get the changeset summary from the workflow input or from the title of
     // the pull request.
-    summary = summary || dot.get(github.context, 'event.pull_request.title')
-    if (!summary) {
-      throw new Error('Changeset summary could not be determined')
-    }
+    summary = summary || dot.get(github.context, 'payload.pull_request.title')
+    if (!summary) throw new Error('Changeset summary could not be determined')
 
     // Try to write and commit the changeset.
     const cwd = process.cwd()
