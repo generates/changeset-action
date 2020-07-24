@@ -40,7 +40,8 @@ async function run () {
         if (!ignoredFiles.includes(file)) {
           const cwd = path.dirname(file)
           const { packageJson } = await readPkgUp({ cwd })
-          releases.push({ name: packageJson.name, type })
+          const hasPackage = releases.some(r => r.name === packageJson.name)
+          if (!hasPackage) releases.push({ name: packageJson.name, type })
         }
       }
     }
