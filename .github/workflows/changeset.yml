@@ -34,4 +34,4 @@ jobs:
       - name: Changeset
         uses: ./
         with:
-          beforeCommit: pnpm i -r
+          before_commit: pnpm i -r
