@@ -1,5 +1,15 @@
 # add-changeset
 
+## 1.1.0
+
+### Minor Changes
+
+- 631251a: Adding before_commit input and execution logic
+
+### Patch Changes
+
+- 71f8bc0: Update dependency @actions/core to ^1.2.6
+
 ## 1.0.8
 
 ### Patch Changes
