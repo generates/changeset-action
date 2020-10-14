@@ -7,7 +7,7 @@ on:
       type:
         description: |
           The SemVer type <major|minor|patch> to use when running manually and so
-          the "changeset:<type>" pull request label can't be used.
+          the "changeset:<type>" pull request label won't be used.
         required: false
       name:
         description: |
