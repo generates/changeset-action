@@ -51,18 +51,21 @@ async function run () {
     summary = summary || dot.get(github.context, 'payload.pull_request.title')
     if (!summary) throw new Error('Changeset summary could not be determined')
 
-    // Try to write and commit the changeset.
+    // Create the changeset.
     const cwd = process.cwd()
     await write({ summary, releases }, cwd)
 
+    // Configure the git user.
     const author = 'github-actions[bot]'
     await execa('git', ['config', '--global', 'user.name', author])
     const email = 'github-actions[bot]@users.noreply.github.com'
     await execa('git', ['config', '--global', 'user.email', email])
 
+    // Commit the changes.
     await execa('git', ['add', '.'])
     await execa('git', ['commit', '-m', 'Adding changeset'])
 
+    // Push the changes back to the branch.
     const branch = dot.get(github.context, 'payload.pull_request.head.ref')
     await execa('git', ['push', 'origin', `HEAD:${branch}`])
   } else {
