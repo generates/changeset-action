@@ -60,6 +60,11 @@ async function run () {
     await execa('git', ['config', '--global', 'user.name', author])
     const email = 'github-actions[bot]@users.noreply.github.com'
     await execa('git', ['config', '--global', 'user.email', email])
+    
+    if (process.env.INPUT_BEFORE_COMMIT) {
+      const [app, ...args] = process.env.INPUT_BEFORE_COMMIT.split(' ')
+      await execa(app, args)
+    }
 
     // Commit the changes.
     await execa('git', ['add', '.'])
