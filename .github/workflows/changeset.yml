@@ -33,3 +33,5 @@ jobs:
           fetch-depth: 0
       - name: Changeset
         uses: ./
+        with:
+          beforeCommit: pnpm i -r
