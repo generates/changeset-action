@@ -42,5 +42,5 @@ Created by [Ian Walter](https://ianwalter.dev)
 [changesetsUrl]: https://github.com/atlassian/changesets
 [renovateUrl]: https://renovatebot.com
 [dependabotUrl]: https://dependabot.com/
-[workflowUrl]: https://github.com/ianwalter/add-changeset/blob/master/.github/workflows/changeset.yml
-[licenseUrl]: https://github.com/ianwalter/add-changeset/blob/master/LICENSE
+[workflowUrl]: https://github.com/ianwalter/add-changeset/blob/main/.github/workflows/changeset.yml
+[licenseUrl]: https://github.com/ianwalter/add-changeset/blob/main/LICENSE
