@@ -29,7 +29,7 @@
     "@changesets/cli": "^2.11.1",
     "@ianwalter/eslint-config": "^5.4.0",
     "@ianwalter/monorepo-app": "^1.0.0",
-    "@ianwalter/renovate-config": "^1.4.0"
+    "@ianwalter/renovate-config": "^1.4.1"
   },
   "eslintConfig": {
     "root": true,
