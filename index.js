@@ -75,7 +75,7 @@ async function run () {
     const actor = process.env.GITHUB_ACTOR
     const token = process.env.INPUT_GITHUB_TOKEN
     const repo = process.env.GITHUB_REPOSITORY
-    const origin = token 
+    const origin = token
       ? `https://${actor}:${token}@github.com/${repo}.git`
       : 'origin'
     await execa('git', ['push', origin, `HEAD:${branch}`])
