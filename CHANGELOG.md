@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.2.2
+
+### Patch Changes
+
+- 6c3c6c7: Still trying to fix branch logic
+
 ## 1.2.1
 
 ### Patch Changes
