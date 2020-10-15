@@ -1,5 +1,17 @@
 # add-changeset
 
+## 1.2.0
+
+### Minor Changes
+
+- ca6220b: Trying workflow_run trigger
+
+### Patch Changes
+
+- 54e9ce7: Fixing origin logic
+- 2f0dc6c: Fixing branch name logic
+- e6beccc: Using GH_PAT
+
 ## 1.1.1
 
 ### Patch Changes
