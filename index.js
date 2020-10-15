@@ -56,9 +56,9 @@ async function run () {
     await write({ summary, releases }, cwd)
 
     // Configure the git user.
-    const author = 'generates[bot]'
+    const author = 'github-actions[bot]'
     await execa('git', ['config', '--global', 'user.name', author])
-    const email = 'bot@generates.io'
+    const email = 'github-actions[bot]@users.noreply.github.com'
     await execa('git', ['config', '--global', 'user.email', email])
 
     if (process.env.INPUT_BEFORE_COMMIT) {
