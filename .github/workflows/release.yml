@@ -3,11 +3,6 @@ on:
   push:
     branches:
       - main
-  workflow_run:
-    workflows: [Changeset]
-    branches: [main]
-    types: 
-      - completed
 jobs:
   release:
     runs-on: ubuntu-latest
