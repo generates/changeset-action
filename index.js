@@ -79,11 +79,6 @@ async function run () {
       ? `https://${actor}:${token}@github.com/${repo}.git`
       : 'origin'
     await execa('git', ['push', origin, `HEAD:${branch}`])
-    
-
-remote_repo=""
-
-    git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION $_TAGS;
   } else {
     print.info('Not adding changeset', { ns, type })
   }
