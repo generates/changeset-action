@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.1.1
+
+### Patch Changes
+
+- 7e9d1bc: Change author to generates bot
+
 ## 1.1.0
 
 ### Minor Changes
