@@ -26,6 +26,11 @@ inputs:
       Runs the specified command before the changeset commit is executed so 
       that any changed files get committed along with it.
     required: false
+  github_token:
+    description: |
+      A GitHub Personal Access Token to use to push the commit so that it 
+      actually triggers workflow runs (unlike the default GITHUB_TOKEN).
+    required: false
 runs:
   using: node12
   main: index.js
