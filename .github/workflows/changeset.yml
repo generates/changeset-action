@@ -39,4 +39,5 @@ jobs:
       - name: Changeset
         uses: ./
         with:
+          github_token: ${{ secrets.GH_PAT }}
           before_commit: npm run lint -- --fix
