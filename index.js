@@ -71,7 +71,8 @@ async function run () {
     await execa('git', ['commit', '-m', 'Adding changeset'])
 
     // Push the changes back to the branch.
-    const branch = (process.env.GITHUB_REF || 'main').split('/').pop()
+    const ref = process.env.GITHUB_REF
+    const branch = dot.get(github.context, 'payload.pull_request.head.ref', ref)
     const actor = process.env.GITHUB_ACTOR
     const token = process.env.INPUT_GITHUB_TOKEN
     const repo = process.env.GITHUB_REPOSITORY
