@@ -71,7 +71,7 @@ async function run () {
     await execa('git', ['commit', '-m', 'Adding changeset'])
 
     // Push the changes back to the branch.
-    const branch = dot.get(github.context, 'payload.pull_request.head.ref')
+    const branch = dot.get(github.context, 'payload.ref')
     await execa('git', ['push', 'origin', `HEAD:${branch}`])
   } else {
     print.info('Not adding changeset', { ns, type })
