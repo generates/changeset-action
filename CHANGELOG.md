@@ -1,5 +1,11 @@
 # add-changeset
 
+## 1.2.1
+
+### Patch Changes
+
+- bbf4b15: Trying to fix branch logic
+
 ## 1.2.0
 
 ### Minor Changes
