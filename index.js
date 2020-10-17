@@ -54,32 +54,6 @@ async function run () {
     // Create the changeset.
     const cwd = process.cwd()
     await write({ summary, releases }, cwd)
-
-    // Configure the git user.
-    const author = 'github-actions[bot]'
-    await execa('git', ['config', '--global', 'user.name', author])
-    const email = 'github-actions[bot]@users.noreply.github.com'
-    await execa('git', ['config', '--global', 'user.email', email])
-
-    if (process.env.INPUT_BEFORE_COMMIT) {
-      const [app, ...args] = process.env.INPUT_BEFORE_COMMIT.split(' ')
-      await execa(app, args)
-    }
-
-    // Commit the changes.
-    await execa('git', ['add', '.'])
-    await execa('git', ['commit', '-m', 'Adding changeset'])
-
-    // Push the changes back to the branch.
-    const ref = process.env.GITHUB_REF
-    const branch = dot.get(github.context, 'payload.pull_request.head.ref', ref)
-    const actor = process.env.GITHUB_ACTOR
-    const token = process.env.INPUT_GITHUB_TOKEN
-    const repo = process.env.GITHUB_REPOSITORY
-    const origin = token
-      ? `https://${actor}:${token}@github.com/${repo}.git`
-      : 'origin'
-    await execa('git', ['push', origin, `HEAD:${branch}`])
   } else {
     print.info('Not adding changeset', { ns, type })
   }
