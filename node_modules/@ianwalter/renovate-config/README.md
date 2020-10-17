@@ -32,4 +32,4 @@ Created by [Ian Walter](https://ianwalter.dev)
 [renovateUrl]: https://renovatebot.com/
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/renovate-config.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/renovate-config
-[licenseUrl]: https://github.com/ianwalter/renovate-config/blob/master/LICENSE
+[licenseUrl]: https://github.com/ianwalter/renovate-config/blob/main/LICENSE
