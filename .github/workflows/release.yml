@@ -1,0 +1,26 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    container:
+      image: node:12.18-buster
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # This makes Actions fetch all Git history so that Changesets can
+          # generate changelogs with the correct commits.
+          fetch-depth: 0
+      - name: Install
+        run: npm i --dev
+      - name: Changesets
+        uses: changesets/action@master
+        with:
+          publish: npx changeset publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
