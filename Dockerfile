@@ -1,7 +1,11 @@
 FROM ianwalter/pnpm:v1.1.0
 
-COPY pnpm-lock.yaml .
-COPY package.json .
-RUN pnpm i
+RUN mkdir -p /opt/change-action
 
-CMD ["node", "index"]
+COPY pnpm-lock.yaml /opt/change-action
+COPY package.json /opt/change-action
+RUN cd /opt/change-action && pnpm i && cd $HOME
+
+COPY index.js /opt/change-action
+
+CMD ["node", "/opt/change-action"]
