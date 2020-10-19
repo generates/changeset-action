@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "changeset-action",
-  "version": "0.0.0",
+  "version": "1.2.2",
   "description": "Automate adding a changeset for simple pull requests",
   "scripts": {
     "lint": "eslint ."
