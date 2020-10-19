@@ -2,17 +2,18 @@ const path = require('path')
 const core = require('@actions/core')
 const github = require('@actions/github')
 const { default: write } = require('@changesets/write')
-const { print } = require('@ianwalter/print')
+const { createLogger } = require('@generates/logger')
 const dot = require('@ianwalter/dot')
 const execa = require('execa')
 const readPkgUp = require('read-pkg-up')
 
+const logger = createLogger({ level: 'info', namespace: 'changeset-action' })
 const types = ['major', 'minor', 'patch']
 const ignoredFiles = ['package-lock.json', 'pnpm-lock.yaml', 'yarn.lock']
 
 async function run () {
   // Try to extract changeset data from the workflow context.
-  if (process.env.DEBUG) print.debug('Context', github.context)
+  if (process.env.DEBUG) logger.debug('Context', github.context)
   let { type, name, summary } = github.context.payload.inputs || {}
   let ns = 'changeset'
 
@@ -55,11 +56,11 @@ async function run () {
     const cwd = process.cwd()
     await write({ summary, releases }, cwd)
   } else {
-    print.info('Not adding changeset', { ns, type })
+    logger.info('Not adding changeset', { ns, type })
   }
 }
 
 run().catch(err => {
-  print.error(err)
+  logger.error(err)
   core.setFailed(err.message)
 })
