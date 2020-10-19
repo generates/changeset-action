@@ -28,7 +28,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Changeset
-        uses: generates/changeset-action@v1.0.0
+        uses: generates/changeset-action@v2.0.0
 ```
 
 ## License
