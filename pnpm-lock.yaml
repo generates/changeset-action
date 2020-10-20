@@ -9,7 +9,7 @@ dependencies:
 devDependencies:
   '@changesets/cli': 2.11.1
   '@ianwalter/eslint-config': 5.4.0
-  '@ianwalter/renovate-config': 1.4.1
+  '@ianwalter/renovate-config': 1.4.2
 lockfileVersion: 5.1
 packages:
   /@actions/core/1.2.6:
@@ -366,10 +366,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Wu7eAZEsfuW0FJsVsdsNaWAtlY/6Viy74HQpZ8A81KutjhNO5cyPRkiBGletuX9kDUTOdSwWJokPnu/o4yE3KA==
-  /@ianwalter/renovate-config/1.4.1:
+  /@ianwalter/renovate-config/1.4.2:
     dev: true
     resolution:
-      integrity: sha512-i0see4GuHnUZDfcgzskNu8iYBvMNGXJYR96Q5zPVVqrkCkeVuGA46NHIwggw8VTvYwwEJhZAFoWsH7t6sAZL/A==
+      integrity: sha512-zsqqCE28FwCvBbXmDQgCwnGa5R1HEiNaMZD4QUwdVuycMT1xtv1TDAj4YiP878M4jgiU83iY1BdUXtjkpxu/Tw==
   /@manypkg/find-root/1.1.0:
     dependencies:
       '@babel/runtime': 7.12.1
@@ -3114,6 +3114,6 @@ specifiers:
   '@generates/logger': ^0.0.8
   '@ianwalter/dot': ^1.0.5
   '@ianwalter/eslint-config': ^5.4.0
-  '@ianwalter/renovate-config': ^1.4.1
+  '@ianwalter/renovate-config': ^1.4.2
   execa: ^4.0.3
   read-pkg-up: ^7.0.1
