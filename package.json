@@ -25,7 +25,7 @@
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.11.1",
+    "@changesets/cli": "^2.11.2",
     "@ianwalter/eslint-config": "^5.4.0",
     "@ianwalter/renovate-config": "^1.4.2"
   },
