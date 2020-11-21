@@ -28,7 +28,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Changeset
-        uses: generates/changeset-action@v2.0.0
+        uses: generates/changeset-action@v2.0.1
       - name: Commit Changes
         uses: generates/commit-action@v1.0.1
         with:
