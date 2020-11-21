@@ -30,7 +30,7 @@ jobs:
       - name: Changeset
         uses: generates/changeset-action@v2.0.0
       - name: Commit Changes
-        uses: generates/commit-action:v1.0.1
+        uses: generates/commit-action@v1.0.1
         with:
           token: ${{ secrets.GH_PAT }}
 ```
