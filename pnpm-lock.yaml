@@ -2,7 +2,7 @@ dependencies:
   '@actions/core': 1.2.6
   '@actions/github': 4.0.0
   '@changesets/write': 0.1.3
-  '@generates/logger': 0.0.8
+  '@generates/logger': 0.1.2
   '@ianwalter/dot': 1.0.5
   execa: 4.0.3
   read-pkg-up: 7.0.1
@@ -240,11 +240,11 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-EfB5OHNYp1F4px/LI/FEnGylop7nOqkQ1LRzCM0KccA2U8tvV8w01KBv37LbO7nW4H+YhKyo2LcJhRwjjV17QQ==
-  /@generates/cli/0.0.6:
+  /@generates/cli/1.0.1:
     dependencies:
-      '@generates/logger': 0.0.6
-      '@ianwalter/dot': 1.0.5
-      '@ianwalter/merge': 9.0.1
+      '@generates/dotter': 2.0.0
+      '@generates/logger': 0.1.2
+      '@generates/merger': 0.1.3
       camelcase: 6.1.0
       common-tags: 1.8.0
       decamelize: 4.0.0
@@ -252,78 +252,33 @@ packages:
       read-pkg-up: 7.0.1
     dev: false
     resolution:
-      integrity: sha512-ssLGSmHxqa1eXi0CRUbQc6enpYv5JqSUod+Fr2zE/zU7ZPvf6UKYA++Ea5XLeKeqMPftZT4DZsLCPpERCLbPuQ==
-  /@generates/cli/0.0.7:
-    dependencies:
-      '@generates/logger': 0.0.7
-      '@generates/merger': 0.0.1
-      '@ianwalter/dot': 1.0.5
-      camelcase: 6.1.0
-      common-tags: 1.8.0
-      decamelize: 4.0.0
-      getopts: 2.2.5
-      read-pkg-up: 7.0.1
+      integrity: sha512-wd9tAyvFKe21q5V+g/G1NvZEnRbPxVTU2bcd5RU0AhGk4h34DD6j31iSLAHTP7kpn5OCiGJW/UnWBvHUNx9SMQ==
+  /@generates/dotter/2.0.0:
     dev: false
     resolution:
-      integrity: sha512-tL4jZ6n+x+/17gzj9zIgK3WHhQBkwRAMKx8zF5HOohYASaJ0TizjWp+KLd5Ep29NoNQzEFWrbZqcW8OAX6FQHw==
-  /@generates/logger/0.0.6:
+      integrity: sha512-QI5gmvS1ZOeZ8msYdctT7VARrHWGGG3PuFYGVqhzkeBkalnaqCAtqOxaGFiEab5f7VzEOZt6d41pmM3fbQmaIQ==
+  /@generates/logger/0.1.2:
     dependencies:
-      '@generates/cli': 0.0.6
+      '@generates/cli': 1.0.1
+      '@generates/dotter': 2.0.0
+      '@generates/merger': 0.1.3
       '@ianwalter/chromafi': 1.0.1
       '@ianwalter/clone': 6.0.1
       '@ianwalter/cloneable': 2.0.0
-      '@ianwalter/dot': 1.0.5
-      '@ianwalter/merge': 9.0.1
       chalk: 4.1.0
       has-ansi: 4.0.0
       has-emoji: 1.1.0
-      marked: 1.2.0
-      marked-terminal: 4.1.0_marked@1.2.0
+      marked: 2.0.0
+      marked-terminal: 4.1.0_marked@2.0.0
       strip-ansi: 6.0.0
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-muP0P5gRkx9YKje3ZLsA46pHoguR7UfJb5/YcfL0Y6lqlltPpJcg8nBbzZy5KNJ7x6kGITMRaxs79dpYk7Bh2g==
-  /@generates/logger/0.0.7:
-    dependencies:
-      '@generates/cli': 0.0.6
-      '@generates/merger': 0.0.1
-      '@ianwalter/chromafi': 1.0.1
-      '@ianwalter/clone': 6.0.1
-      '@ianwalter/cloneable': 2.0.0
-      '@ianwalter/dot': 1.0.5
-      chalk: 4.1.0
-      has-ansi: 4.0.0
-      has-emoji: 1.1.0
-      marked: 1.2.0
-      marked-terminal: 4.1.0_marked@1.2.0
-      strip-ansi: 6.0.0
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-uUOtIQx3AL4J3j2I9dgIj/pDJutYv5edIrC8mZ6/1cWWbP7vOVb+0m5E+9maGu0qHttgfbwtYLakmhb+5PaEGA==
-  /@generates/logger/0.0.8:
-    dependencies:
-      '@generates/cli': 0.0.7
-      '@generates/merger': 0.0.1
-      '@ianwalter/chromafi': 1.0.1
-      '@ianwalter/clone': 6.0.1
-      '@ianwalter/cloneable': 2.0.0
-      '@ianwalter/dot': 1.0.5
-      chalk: 4.1.0
-      has-ansi: 4.0.0
-      has-emoji: 1.1.0
-      marked: 1.2.0
-      marked-terminal: 4.1.0_marked@1.2.0
-      strip-ansi: 6.0.0
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-ppgd01vaoFmlhogGMpNnR9FkMKp8F2J61qn89zbfylHOh0lecsRTyt8hGt4fyzX6H14AsRC2oHRse4HJp+Aw8Q==
-  /@generates/merger/0.0.1:
+      integrity: sha512-tTQdLa5luH79IWaDx3pZGe5+qGjflQPewDm11dIGXXFw+MLt99Nz8tUlgQa71KLtOY51wcR2XmuVpXCNWjErsQ==
+  /@generates/merger/0.1.3:
     dev: false
     resolution:
-      integrity: sha512-A0zgTrlKJcroOOxx7GOY+OmVvGYVusG0UlhJLC/q8OvpQzF5xHE/jwW7mfPt5anJwHaRgWcWwjfQAFtk3HtYRA==
+      integrity: sha512-x4KKHexiP4hIfoGZumc3RSac1t9d/aGErxbG9NASHcx59mljW2uyKDt4qP3igi9hszIHV5mjb4TbAYUNFoWg3w==
   /@ianwalter/chromafi/1.0.1:
     dependencies:
       ansi-mark: 1.0.4
@@ -367,10 +322,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-vx1mxFKvbYwk+Plt+xyXeKuxqH8ibW2k4sQDW/fJ/colqrahb6HaOZbym1Iclx4iwmDZ5Pk9zNbKQsKaXOmSZA==
-  /@ianwalter/merge/9.0.1:
-    dev: false
-    resolution:
-      integrity: sha512-Wu7eAZEsfuW0FJsVsdsNaWAtlY/6Viy74HQpZ8A81KutjhNO5cyPRkiBGletuX9kDUTOdSwWJokPnu/o4yE3KA==
   /@ianwalter/renovate-config/1.4.3:
     dev: true
     resolution:
@@ -1680,6 +1631,7 @@ packages:
     resolution:
       integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
   /highlight.js/9.18.3:
+    deprecated: Version no longer supported. Upgrade to @latest
     dev: false
     resolution:
       integrity: sha512-zBZAmhSupHIl5sITeMqIJnYCDfAEc3Gdkqj65wC1lpI468MMQeeQkhcIAvk+RylAkxrCcI9xy9piHiXeQ1BdzQ==
@@ -2021,13 +1973,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-glc9y00wgtwcDmp7GaE/0b0OnxpNJsVf3ael/An6Fe2Q51LLwN1er6sdomLRzz5h0+yMpiYLhWYF5R7HeqVd4g==
-  /marked-terminal/4.1.0_marked@1.2.0:
+  /marked-terminal/4.1.0_marked@2.0.0:
     dependencies:
       ansi-escapes: 4.3.1
       cardinal: 2.1.1
       chalk: 4.1.0
       cli-table: 0.3.1
-      marked: 1.2.0
+      marked: 2.0.0
       node-emoji: 1.10.0
       supports-hyperlinks: 2.1.0
     dev: false
@@ -2035,13 +1987,13 @@ packages:
       marked: '>=0.4.0 <2.0.0'
     resolution:
       integrity: sha512-5KllfAOW02WS6hLRQ7cNvGOxvKW1BKuXELH4EtbWfyWgxQhROoMxEvuQ/3fTgkNjledR0J48F4HbapvYp1zWkQ==
-  /marked/1.2.0:
+  /marked/2.0.0:
     dev: false
     engines:
       node: '>= 8.16.2'
     hasBin: true
     resolution:
-      integrity: sha512-tiRxakgbNPBr301ihe/785NntvYyhxlqcL3YaC8CaxJQh7kiaEtrN9B/eK2I2943Yjkh5gw25chYFDQhOMCwMA==
+      integrity: sha512-NqRSh2+LlN2NInpqTQnS614Y/3NkVMFFU6sJlRFEpxJ/LHuK/qJECH7/fXZjk4VZstPW/Pevjil/VtSONsLc7Q==
   /meow/6.1.1:
     dependencies:
       '@types/minimist': 1.2.0
@@ -3084,7 +3036,7 @@ specifiers:
   '@actions/github': ^4.0.0
   '@changesets/cli': ^2.14.1
   '@changesets/write': ^0.1.3
-  '@generates/logger': ^0.0.8
+  '@generates/logger': ^0.1.2
   '@ianwalter/dot': ^1.0.5
   '@ianwalter/eslint-config': ^6.2.0
   '@ianwalter/renovate-config': ^1.4.3
