@@ -1,4 +1,4 @@
-FROM ianwalter/pnpm:v1.1.0
+FROM ianwalter/pnpm:v1.4.0
 
 RUN mkdir -p /opt/change-action
 
