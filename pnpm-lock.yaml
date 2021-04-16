@@ -8,7 +8,7 @@ specifiers:
   '@generates/logger': ^1.0.0
   '@ianwalter/dot': ^1.0.5
   '@ianwalter/eslint-config': ^6.2.0
-  '@ianwalter/renovate-config': ^1.4.3
+  '@ianwalter/renovate-config': ^1.4.4
   execa: ^4.1.0
   read-pkg-up: ^7.0.1
 
@@ -24,7 +24,7 @@ dependencies:
 devDependencies:
   '@changesets/cli': 2.15.0
   '@ianwalter/eslint-config': 6.2.0
-  '@ianwalter/renovate-config': 1.4.3
+  '@ianwalter/renovate-config': 1.4.4
 
 packages:
 
@@ -341,8 +341,8 @@ packages:
       - supports-color
     dev: true
 
-  /@ianwalter/renovate-config/1.4.3:
-    resolution: {integrity: sha512-61InLaz89GLb3iTcRSL2Z+WtYnEIfzWJ7gy+R8ascdsRpARU8qwkBqmq6euw8OPxfHNbqtqEAiG1ljckFjVwsQ==}
+  /@ianwalter/renovate-config/1.4.4:
+    resolution: {integrity: sha512-LJRn/jAwIrUWfH5gwibOsUVQeXJVnPhoML0Yybx4xKvowyIKY2nwzvXvR1xPa2zK4EH+EW7WeQ/+Z1vctp67XA==}
     dev: true
 
   /@manypkg/find-root/1.1.0:
