@@ -27,7 +27,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.15.0",
     "@ianwalter/eslint-config": "^6.2.0",
-    "@ianwalter/renovate-config": "^1.4.3"
+    "@ianwalter/renovate-config": "^1.4.4"
   },
   "eslintConfig": {
     "root": true,
