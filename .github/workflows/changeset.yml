@@ -35,6 +35,6 @@ jobs:
       - name: Add Changeset
         uses: ./
       - name: Commit Changes
-        uses: generates/commit-action@v1.0.1
+        uses: generates/commit-action@v1.0.2
         with:
           token: ${{ secrets.GH_PAT }}
