@@ -42,10 +42,11 @@ async function run () {
       )
       for (const file of stdout.split('\n')) {
         if (!ignoredFiles.includes(file)) {
-          const cwd = path.dirname(file)
-          const { packageJson } = await readPackageUpAsync({ cwd })
+          const cwd = path.resolve(path.dirname(file))
+          const { packageJson, ...pkg } = await readPackageUpAsync({ cwd })
           const hasPackage = releases.some(r => r.name === packageJson.name)
           if (!hasPackage) releases.push({ name: packageJson.name, type })
+          logger.log('Git change found', { ...pkg, cwd, hasPackage })
         }
       }
     }
