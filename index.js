@@ -15,18 +15,21 @@ async function run () {
   // Try to extract changeset data from the workflow context.
   if (process.env.DEBUG) logger.debug('Context', github.context)
   let { type, name, summary } = github.context.payload.inputs || {}
-  let ns = 'changeset'
 
   // Try to extract changeset data from the pull request label or workflow
   // input.
-  const label = dot.get(github.context, 'payload.label.name')
-  if (!type && label) {
-    const parts = label.split('.')
-    ns = parts[0]
-    type = parts[1]
+  const labels = github.context.payload?.pull_request?.labels || []
+  if (!type) {
+    for (const label of labels) {
+      const [ns, t] = label.name.split('.')
+      if (ns === 'changeset' && types.includes(t)) {
+        type = t
+        break
+      }
+    }
   }
 
-  if (ns === 'changeset' && types.includes(type)) {
+  if (types.includes(type)) {
     // Get the package name from the workflow input or try to determine it by
     // finding the nearest package.json to the first changed file.
     const releases = []
@@ -56,7 +59,7 @@ async function run () {
     const cwd = process.cwd()
     await write({ summary, releases }, cwd)
   } else {
-    logger.info('Not adding changeset', { ns, type })
+    logger.info('Not adding changeset', { type, labels })
   }
 }
 
