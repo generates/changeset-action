@@ -21,7 +21,7 @@ async function run () {
   // input.
   const label = dot.get(github.context, 'payload.label.name')
   if (!type && label) {
-    const parts = label.split(':')
+    const parts = label.split('.')
     ns = parts[0]
     type = parts[1]
   }
