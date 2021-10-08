@@ -220,26 +220,10 @@
     fs-extra "^7.0.1"
     p-filter "^2.1.0"
 
-"@changesets/types@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/@changesets/types/-/types-4.0.0.tgz"
-  integrity sha512-whLmPx2wgJRoOtxVZop+DJ71z1gTSkij7osiHgN+pe//FiE6bb4ffvBBb0rACs2cUPfAkWxgSPzqkECgKS1jvQ==
-
 "@changesets/types@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@changesets/types/-/types-4.0.1.tgz#85cf3cc32baff0691112d9d15fc21fbe022c9f0a"
   integrity sha512-zVfv752D8K2tjyFmxU/vnntQ+dPu+9NupOSguA/2Zuym4tVxRh0ylArgKZ1bOAi2eXfGlZMxJU/kj7uCSI15RQ==
-
-"@changesets/write@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/@changesets/write/-/write-0.1.4.tgz"
-  integrity sha512-uco+vS3mo2JqflLciIU707har+6AEFOeP8pgu3vVC1M2WcKukQgR1KylHFqZJxKQWahf8mQnuUSbgR4yJQuhmA==
-  dependencies:
-    "@babel/runtime" "^7.10.4"
-    "@changesets/types" "^4.0.0"
-    fs-extra "^7.0.1"
-    human-id "^1.0.2"
-    prettier "^1.19.1"
 
 "@changesets/write@^0.1.5":
   version "0.1.5"
