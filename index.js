@@ -1,11 +1,11 @@
-const path = require('path')
-const core = require('@actions/core')
-const github = require('@actions/github')
-const { default: write } = require('@changesets/write')
-const { createLogger } = require('@generates/logger')
-const dot = require('@ianwalter/dot')
-const execa = require('execa')
-const readPkgUp = require('read-pkg-up')
+import path from 'path'
+import core from '@actions/core'
+import github from '@actions/github'
+import write from '@changesets/write'
+import { createLogger } from '@generates/logger'
+import dot from '@ianwalter/dot'
+import execa from 'execa'
+import readPkgUp from 'read-pkg-up'
 
 const logger = createLogger({ level: 'info', namespace: 'changeset-action' })
 const types = ['major', 'minor', 'patch']
