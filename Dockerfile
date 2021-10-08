@@ -1,5 +1,7 @@
 FROM node:16-buster-slim
 
+RUN apt-get update && apt-get install -y git
+
 RUN mkdir -p /opt/change-action
 
 COPY yarn.lock /opt/change-action
