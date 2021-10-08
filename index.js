@@ -56,7 +56,7 @@ async function run () {
     if (!summary) throw new Error('Changeset summary could not be determined')
 
     // Don't create a new changeset if it already exists.
-    const { stdout } = await execa('grep', [`"${summary}"`, '.changeset/*'])
+    const { stdout } = await execa('grep', [`"${summary}"`, '-r', '.changeset'])
     if (stdout) return logger.info('Found existing changeset:', stdout)
 
     // Create the changeset.
