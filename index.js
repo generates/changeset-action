@@ -55,6 +55,10 @@ async function run () {
     summary = summary || dot.get(github.context, 'payload.pull_request.title')
     if (!summary) throw new Error('Changeset summary could not be determined')
 
+    // Don't create a new changeset if it already exists.
+    const { stdout } = await execa('grep', [`"${summary}"`, '.changeset/*'])
+    if (stdout) return logger.info('Found existing changeset:', stdout)
+
     // Create the changeset.
     const cwd = process.cwd()
     await write.default({ summary, releases }, cwd)
