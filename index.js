@@ -5,7 +5,7 @@ import write from '@changesets/write'
 import { createLogger } from '@generates/logger'
 import dot from '@ianwalter/dot'
 import execa from 'execa'
-import readPkgUp from 'read-pkg-up'
+import { readPackageUpAsync } from 'read-pkg-up'
 
 const logger = createLogger({ level: 'info', namespace: 'changeset-action' })
 const types = ['major', 'minor', 'patch']
@@ -40,7 +40,7 @@ async function run () {
       for (const file of stdout.split('\n')) {
         if (!ignoredFiles.includes(file)) {
           const cwd = path.dirname(file)
-          const { packageJson } = await readPkgUp({ cwd })
+          const { packageJson } = await readPackageUpAsync({ cwd })
           const hasPackage = releases.some(r => r.name === packageJson.name)
           if (!hasPackage) releases.push({ name: packageJson.name, type })
         }
