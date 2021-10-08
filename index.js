@@ -57,7 +57,7 @@ async function run () {
 
     // Create the changeset.
     const cwd = process.cwd()
-    await write({ summary, releases }, cwd)
+    await write.default({ summary, releases }, cwd)
   } else {
     logger.info('Not adding changeset', { type, labels })
   }
