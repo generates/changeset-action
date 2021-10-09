@@ -1,5 +1,11 @@
 # changeset-action
 
+## 2.0.4
+
+### Patch Changes
+
+- c4dab6d: Get list of changed files from GitHub instead of git diff-tree
+
 ## 2.0.3
 
 ### Patch Changes
