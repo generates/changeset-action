@@ -53,7 +53,7 @@ async function run () {
       logger.info('Files', res.data.files)
 
       for (const file of res.data.files) {
-        if (!ignoredFiles.includes(file)) {
+        if (!ignoredFiles.includes(file.filename)) {
           const cwd = path.resolve(path.dirname(file.filename))
           const { packageJson, ...pkg } = await readPackageUpAsync({ cwd })
           const hasPackage = releases.some(r => r.name === packageJson.name)
