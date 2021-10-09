@@ -13,12 +13,12 @@ const ignoredFiles = ['package-lock.json', 'pnpm-lock.yaml', 'yarn.lock']
 
 async function run () {
   // Try to extract changeset data from the workflow context.
-  if (process.env.DEBUG) logger.debug('Context', github.context)
-  let { type, name, summary } = github.context.payload.inputs || {}
+  logger.debug('Context', github.context)
+  let { type, name, summary, token } = github.context.payload.inputs || {}
 
   // Try to extract changeset data from the pull request label or workflow
   // input.
-  const labels = github.context.payload?.pull_request?.labels || []
+  const { labels = [], base, head } = github.context.payload?.pull_request || {}
   if (!type) {
     for (const label of labels) {
       const [ns, t] = label.name.split('.')
@@ -36,17 +36,24 @@ async function run () {
     if (name) {
       releases.push({ name, type })
     } else {
-      const { stdout } = await execa(
-        'git',
-        ['diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD', '--']
-      )
-      for (const file of stdout.split('\n')) {
+      // Get the list of changed files from GitHub.
+      const octokit = github.getOctokit(token)
+      const res = await octokit.repos.compareCommits({
+        base: base.sha,
+        head: head.sha,
+        owner: github.context.repo.owner,
+        repo: github.context.repo.repo
+      })
+
+      logger.info('Files', res.data.files)
+
+      for (const file of res.data.files) {
         if (!ignoredFiles.includes(file)) {
           const cwd = path.resolve(path.dirname(file))
           const { packageJson, ...pkg } = await readPackageUpAsync({ cwd })
           const hasPackage = releases.some(r => r.name === packageJson.name)
           if (!hasPackage) releases.push({ name: packageJson.name, type })
-          logger.info('Git change found', { file, ...pkg, cwd, hasPackage })
+          logger.debug('File', { file, ...pkg, cwd, hasPackage })
         }
       }
     }
