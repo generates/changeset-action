@@ -1,8 +1,8 @@
 # changeset-action
 
-## 2.0.4
+## 3.0.0
 
-### Patch Changes
+### Major Changes
 
 - c4dab6d: Get list of changed files from GitHub instead of git diff-tree
 
