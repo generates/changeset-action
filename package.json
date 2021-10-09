@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "changeset-action",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Automate adding a changeset for simple pull requests",
   "type": "module",
   "scripts": {
