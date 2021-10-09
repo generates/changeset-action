@@ -43,7 +43,7 @@ async function run () {
     } else {
       // Get the list of changed files from GitHub.
       const octokit = github.getOctokit(token)
-      const res = await octokit.repos.compareCommits({
+      const res = await octokit.rest.repos.compareCommits({
         base: base.sha,
         head: head.sha,
         owner: github.context.repo.owner,
