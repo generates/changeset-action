@@ -54,7 +54,7 @@ async function run () {
 
       for (const file of res.data.files) {
         if (!ignoredFiles.includes(file)) {
-          const cwd = path.resolve(path.dirname(file))
+          const cwd = path.resolve(path.dirname(file.filename))
           const { packageJson, ...pkg } = await readPackageUpAsync({ cwd })
           const hasPackage = releases.some(r => r.name === packageJson.name)
           if (!hasPackage) releases.push({ name: packageJson.name, type })
