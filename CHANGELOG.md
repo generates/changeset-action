@@ -1,5 +1,11 @@
 # changeset-action
 
+## 2.0.3
+
+### Patch Changes
+
+- 88b5eac: Fixing git diff-tree command
+
 ## 2.0.2
 
 ### Patch Changes
