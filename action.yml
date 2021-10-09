@@ -21,6 +21,9 @@ inputs:
       The changeset summary to use when running manually. If not specified, the
       pull request title will be used.
     required: false
+  token:
+    description: GitHub token to use when getting changed files.
+    required: false
 runs:
   using: docker
   image: Dockerfile
