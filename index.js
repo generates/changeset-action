@@ -38,7 +38,7 @@ async function run () {
     } else {
       const { stdout } = await execa(
         'git',
-        ['diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD~1']
+        ['diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD', '--']
       )
       for (const file of stdout.split('\n')) {
         if (!ignoredFiles.includes(file)) {
@@ -46,7 +46,7 @@ async function run () {
           const { packageJson, ...pkg } = await readPackageUpAsync({ cwd })
           const hasPackage = releases.some(r => r.name === packageJson.name)
           if (!hasPackage) releases.push({ name: packageJson.name, type })
-          logger.log('Git change found', { ...pkg, cwd, hasPackage })
+          logger.info('Git change found', { file, ...pkg, cwd, hasPackage })
         }
       }
     }
