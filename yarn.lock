@@ -254,17 +254,17 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@generates/cli@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-2.0.0.tgz#d9efde0e188ec1996c5c1cf813d65943737d1aff"
-  integrity sha512-kTXDIieesslyb/GGeLlVdiBu3b6YcfFCqvk8LiO6Lz02TLr57MGh7xuBVBbWG3RzccK87x+8AXQymx3U3B1RAg==
+"@generates/cli@^2.0.1":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-2.0.3.tgz#9b7f7384a202c69fd2c22dbb4efe034748e9a414"
+  integrity sha512-B6OZ2Byb3LTNDw8nz+YXhdjXjKIUTXqnGzSg+JLVP7zM5qHN1c57QN4DkMIEfLK8+wF9XOIKrEiYvZdlUDZv2g==
   dependencies:
-    "@generates/dotter" "^2.0.0"
-    "@generates/logger" "^2.0.0"
+    "@generates/dotter" "^2.0.3"
+    "@generates/logger" "^2.0.4"
     "@generates/merger" "^0.1.3"
     camelcase "^6.0.0"
     common-tags "^1.8.0"
-    decamelize "^4.0.0"
+    decamelize "^6.0.0"
     getopts "^2.2.5"
     read-pkg-up "^7.0.1"
 
@@ -273,26 +273,30 @@
   resolved "https://registry.npmjs.org/@generates/dotter/-/dotter-2.0.0.tgz"
   integrity sha512-QI5gmvS1ZOeZ8msYdctT7VARrHWGGG3PuFYGVqhzkeBkalnaqCAtqOxaGFiEab5f7VzEOZt6d41pmM3fbQmaIQ==
 
-"@generates/logger@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@generates/logger/-/logger-2.0.0.tgz#cb97f084aed936ee4c8015f844840282af547d82"
-  integrity sha512-iv9qj2qYwWkzkr8qKpEOTMGwZZZjVypEM1/OWp3XJSinF2sX0Wa4PL+21NYMVXxdqgRk4VoQdmhpa9JV+3Yjww==
+"@generates/dotter@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@generates/dotter/-/dotter-2.0.3.tgz#a03dc32151291e5b84cc2bddc831a8d10e1a9c50"
+  integrity sha512-c6Wdfn4+1YKR9J+dg2Eenogd7halDT98oRyIKCyQmlyxTpSaX+CFFxA24krFPKUQOrPiHwLNx1MoWWoDw0x/LQ==
+
+"@generates/logger@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@generates/logger/-/logger-2.0.4.tgz#d4e91195000235d3f1c01915a212ceb17d5d6bb7"
+  integrity sha512-hyGJ0hFb0lWYTby/igXyIxTE8pL0EOfPY+iBUeaDd+vPQJ+RKj3n02p3vj8z+xCfFukRid4IJ4w0W6EHuNwtWg==
   dependencies:
-    "@generates/cli" "^2.0.0"
+    "@generates/cli" "^2.0.1"
     "@generates/dotter" "^2.0.0"
     "@generates/merger" "^0.1.0"
     "@generates/number-lines" "^0.0.1"
     chalk "^4.1.0"
     common-tags "^1.8.0"
     emphasize "^5.0.0"
-    get-own-enumerable-property-symbols "^3.0.2"
-    has-ansi "^4.0.0"
-    has-emoji "^1.1.0"
+    has-ansi "^5.0.0"
+    has-emoji "^2.0.0"
     is-obj "^3.0.0"
     is-regexp "^3.0.0"
     marked "^3.0.0"
     marked-terminal "^4.1.0"
-    strip-ansi "^6.0.0"
+    strip-ansi "^7.0.0"
 
 "@generates/merger@^0.1.0", "@generates/merger@^0.1.3":
   version "0.1.3"
@@ -548,15 +552,15 @@ ansi-regex@^3.0.0:
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz"
   integrity sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
 
-ansi-regex@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz"
-  integrity sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1rx4Loy1ArBggoqGpfqqdI4rondg==
-
 ansi-regex@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz"
   integrity sha512-bY6fj56OUQ0hU1KjFNDQuJFezqKdrAyFdIevADiqrWHwSlbmBNMHp5ak2f40Pm8JTFyM2mqxkG6ngkHO11f/lg==
+
+ansi-regex@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.1.tgz#3183e38fae9a65d7cb5e53945cd5897d0260a06a"
+  integrity sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -891,10 +895,10 @@ decamelize@^1.1.0, decamelize@^1.2.0:
   resolved "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
-decamelize@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/decamelize/-/decamelize-4.0.0.tgz"
-  integrity sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ==
+decamelize@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-6.0.0.tgz#8cad4d916fde5c41a264a43d0ecc56fe3d31749e"
+  integrity sha512-Fv96DCsdOgB6mdGl67MT5JaTNKRzrzill5OH5s8bjYJXVlcXyPYGyPsUkWyGV5p1TXI5esYIYMMeDJL0hEIwaA==
 
 deep-is@^0.1.3:
   version "0.1.3"
@@ -988,6 +992,11 @@ emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
+
+emoji-regex@^9.2.2:
+  version "9.2.2"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
+  integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
 
 emphasize@^5.0.0:
   version "5.0.0"
@@ -1430,11 +1439,6 @@ get-intrinsic@^1.0.0, get-intrinsic@^1.0.1:
     has "^1.0.3"
     has-symbols "^1.0.1"
 
-get-own-enumerable-property-symbols@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-3.0.2.tgz#b5fde77f22cbe35f390b4e089922c50bce6ef664"
-  integrity sha512-I0UBV/XOz1XkIJHEUDMZAbzCThU/H8DxmSfmdGcKPnVhu2VfFqr34jr9777IyaTYvxjedWhqVIilEDsCdP5G6g==
-
 get-stream@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/get-stream/-/get-stream-3.0.0.tgz"
@@ -1503,19 +1507,19 @@ hard-rejection@^2.1.0:
   resolved "https://registry.npmjs.org/hard-rejection/-/hard-rejection-2.1.0.tgz"
   integrity sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==
 
-has-ansi@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/has-ansi/-/has-ansi-4.0.1.tgz"
-  integrity sha512-Qr4RtTm30xvEdqUXbSBVWDu+PrTokJOwe/FU+VdfJPk+MXAPoeOzKpRyrDTnZIJwAkQ4oBLTU53nu0HrkF/Z2A==
+has-ansi@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/has-ansi/-/has-ansi-5.0.1.tgz#eb5ce8db3465c66e0b83c7f01fd0c1ea87687071"
+  integrity sha512-Fp2IsZDnnyoJkKg22ZyQFvD7QRCcMTsLAtloKXyXWJ1joGLtItRU9Bv/k1o0tELL2NF3ZZBcycSKryZUM+Yl3g==
   dependencies:
-    ansi-regex "^4.1.0"
+    ansi-regex "^6.0.1"
 
-has-emoji@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/has-emoji/-/has-emoji-1.1.0.tgz"
-  integrity sha512-5V4f0i0shdp6BzSE5WLBKh0EJky6wAo+b1pRS2Azm8cyJCekNxXhhAQJopYto3iMluh5rKD9n+vjQLZb7iR6+g==
+has-emoji@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/has-emoji/-/has-emoji-2.0.0.tgz#d20d475f98528af0dd9846acbe58521d4739dac6"
+  integrity sha512-COSqC/JZX2WXxWNSJ1JIzcp5E0/pbOv3DBKtCgswNOEVIxXD2532aWxuzGu1Qcm0izJf7NcqVMuQttpOXqDeiA==
   dependencies:
-    emoji-regex "^8.0.0"
+    emoji-regex "^9.2.2"
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -2655,6 +2659,13 @@ strip-ansi@^6.0.0:
   integrity sha512-AuvKTrTfQNYNIctbR1K/YGTR1756GycPsg7b9bdV9Duqur4gv6aKqHXah67Z8ImS7WEz5QVcOtlfW2rZEugt6w==
   dependencies:
     ansi-regex "^5.0.0"
+
+strip-ansi@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-7.0.1.tgz#61740a08ce36b61e50e65653f07060d000975fb2"
+  integrity sha512-cXNxvT8dFNRVfhVME3JAe98mkXDYN2O1l7jmcwMnOslDeESg1rF/OZMtK0nRAhiari1unG5cD4jG3rapUAkLbw==
+  dependencies:
+    ansi-regex "^6.0.1"
 
 strip-bom@^3.0.0:
   version "3.0.0"
