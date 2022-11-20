@@ -18,7 +18,7 @@
   "homepage": "https://github.com/generates/changeset-action#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "@actions/github": "^5.0.0",
+    "@actions/github": "^5.1.1",
     "@changesets/write": "^0.1.5",
     "@generates/logger": "^2.0.0",
     "@ianwalter/dot": "^1.0.5",
