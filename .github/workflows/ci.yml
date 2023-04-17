@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: node:15-buster-slim
+      image: node:19-buster-slim
     timeout-minutes: 3
     steps:
       - name: Checkout

@@ -1,4 +1,4 @@
-FROM node:16-buster-slim
+FROM node:19-buster-slim
 
 RUN apt-get update && apt-get install -y git grep
 
