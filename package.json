@@ -19,7 +19,7 @@
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
-    "@changesets/write": "^0.1.5",
+    "@changesets/write": "^0.2.3",
     "@generates/logger": "^2.0.0",
     "@ianwalter/dot": "^1.0.5",
     "execa": "^5.1.1",
