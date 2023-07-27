@@ -22,7 +22,7 @@
     "@changesets/write": "^0.1.5",
     "@generates/logger": "^2.0.0",
     "@ianwalter/dot": "^1.0.5",
-    "execa": "^5.1.1",
+    "execa": "^7.2.0",
     "read-pkg-up": "^8.0.0"
   },
   "devDependencies": {
